@@ -9,7 +9,7 @@ confinement: classic
 
 architectures:
   - build-on: amd64
-    build-for: armhf
+
 parts:
   process1:
     source: process1
