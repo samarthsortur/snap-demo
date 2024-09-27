@@ -1,4 +1,4 @@
-name: bacnet-stack
+name: snap-demo
 version: '0.1'
 summary: A sample snap pacakage which has 2 processes
 description: |
@@ -10,10 +10,12 @@ architectures:
   - build-on: amd64
 parts:
   process1:
-    source: process1
-    source-type: local
+    source: https://github.com/samarthsortur/snap-demo.git
+    source-type: git
+    source-branch: main
     plugin: make
     override-build: |
+      cd process1
       make
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
       cp process1 $SNAPCRAFT_PART_INSTALL/bin/
