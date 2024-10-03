@@ -5,7 +5,7 @@ description: |
   This is a sample snap for demonstration purposes.
 base: core22
 grade: stable
-confinement: classic
+confinement: strict
 architectures:
   - build-on: amd64
 parts:
